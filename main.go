@@ -39,13 +39,13 @@ const (
 	_API_STOP         = "off"
 	_AUTHENTICATE_MSG = "Credentials fpr remote launcher"
 
-	_DEF_TITLE = "remote launcher at"
-	_ON_IMG    = "on.png"
-	_OFF_IMG   = "off.png"
-	_SETTINGS_IMG   = "refresh.png"
-	_ON_ALT    = "is running"
-	_OFF_ALT   = "is not runng"
-	_SETTINGS_ALT   = "refresh"
+	_DEF_TITLE    = "remote launcher at"
+	_ON_IMG       = "on.png"
+	_OFF_IMG      = "off.png"
+	_SETTINGS_IMG = "refresh.png"
+	_ON_ALT       = "is running"
+	_OFF_ALT      = "is not runng"
+	_SETTINGS_ALT = "refresh"
 )
 
 type launcher struct {
@@ -193,7 +193,7 @@ func main() {
 func listApps(l launcher, apps []string, w http.ResponseWriter, r *http.Request) {
 	fmt.Fprintf(w, "<HTML>\n<HEAD>\n<TITLE>%v</TITLE>\n<LINK rel=\"stylesheet\"  href=\"resources/launcher.css\">\n</HEAD>\n<BODY>\n", l.config.Title)
 	fmt.Fprintf(w, "<DIV id=\"header\">\n<H1>%v</H1>\n</DIV>\n", l.config.Title)
-	fmt.Fprintf(w, "<DIV id=\"settings\"><A HREF=%v><IMG class=\"settings\" src=\"%v/%v\" alt=\"%v\"></A></DIV>\n", _SETTINGS, _RESOURCES, _SETTINGS_IMG,_SETTINGS_ALT)
+	fmt.Fprintf(w, "<DIV id=\"settings\"><A HREF=%v><IMG class=\"settings\" src=\"%v/%v\" alt=\"%v\"></A></DIV>\n", _SETTINGS, _RESOURCES, _SETTINGS_IMG, _SETTINGS_ALT)
 	fmt.Fprintf(w, "<DIV id=\"main\">\n")
 	for _, k := range apps {
 		var img, alt, api string
