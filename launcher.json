@@ -1,0 +1,57 @@
+{
+	"port": ":8085",
+	"user": "foo",
+	"password": "bar67#",
+	"apps": {
+		"amarok": {
+			"start": {
+				"cmd": "/bin/sh",
+				"args": ["-c", "amarok &"]
+			},
+			"status": {
+				"cmd": "/usr/bin/pgrep",
+				"args": ["amarok"]
+			}
+		},
+		"clementine": {
+			"start": {
+				"cmd": "/bin/sh",
+				"args": ["-c", "clementine &"]
+			},
+			"status": {
+				"cmd": "/usr/bin/pgrep",
+				"args": ["clementine"]
+			}
+		},
+		"spotify": {
+			"start": {
+				"cmd": "/bin/sh",
+				"args": ["-c", "spotify &"]
+			},
+			"status": {
+				"cmd": "/usr/bin/pgrep",
+				"args": ["spotify"]
+			}
+		},
+		"kodi": {
+			"start": {
+				"cmd": "/bin/sh",
+				"args": ["-c", "kodi &"]
+			},
+			"status": {
+				"cmd": "/usr/bin/pgrep",
+				"args": ["kodi"]
+			}
+		},
+		"vlc": {
+			"start": {
+				"cmd": "/bin/sh",
+				"args": ["-c", "vlc &"]
+			},
+			"status": {
+				"cmd": "/usr/bin/pgrep",
+				"args": ["vlc"]
+			}
+		}
+	}
+}

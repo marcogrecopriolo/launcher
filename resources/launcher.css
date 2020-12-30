@@ -1,0 +1,57 @@
+/* bigger display for mobiles */
+@media screen and (max-width: 1000px) {
+  body {
+    transform: scale(1.5,1.5) translate(5%,20%);
+  }
+}
+
+#header {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+ }
+
+#settings {
+  text-align: right;
+  margin: auto;
+  margin-bottom: 10;
+  width: 50%
+
+/* for bottom positioning:
+
+  width: 70%;
+  position: absolute;
+  bottom: 10%;
+*/
+}
+
+.settings {
+   width: 48;
+   height: 48;
+}
+
+#main {
+  width: 50%;
+  margin: auto;
+}
+
+#content {
+  margin-top: 5;
+  margin-bottom: 5;
+  padding-top: 5;
+  padding-bottom: 5;
+  padding-left: 5;
+  border-radius: 5px;
+  background-color: #d0d0d0;
+}
+
+.content {
+  vertical-align: middle;
+  width: 96;
+  height: 96;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
