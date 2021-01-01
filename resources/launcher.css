@@ -1,13 +1,18 @@
-/* bigger display for mobiles */
-@media screen and (max-width: 1000px) {
-  body {
-    transform: scale(1.5,1.5) translate(5%,20%);
+@media screen and (min-width: 500px) {
+  :root {
+	--width: 95%
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  :root {
+	--width: 50%
   }
 }
 
 #header {
   text-align: center;
-  width: 50%;
+  width: var(--width);
   margin: auto;
  }
 
@@ -15,7 +20,7 @@
   text-align: right;
   margin: auto;
   margin-bottom: 10;
-  width: 50%
+  width: var(--width)
 
 /* for bottom positioning:
 
@@ -31,7 +36,7 @@
 }
 
 #main {
-  width: 50%;
+  width: var(--width);
   margin: auto;
 }
 

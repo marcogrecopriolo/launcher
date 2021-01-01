@@ -191,7 +191,8 @@ func main() {
 }
 
 func listApps(l launcher, apps []string, w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintf(w, "<HTML>\n<HEAD>\n<TITLE>%v</TITLE>\n<LINK rel=\"stylesheet\"  href=\"resources/launcher.css\">\n</HEAD>\n<BODY>\n", l.config.Title)
+	fmt.Fprintf(w, "<HTML>\n<HEAD>\n<TITLE>%v</TITLE>\n<LINK rel=\"stylesheet\"  href=\"resources/launcher.css\">\n</HEAD>\n", l.config.Title)
+	fmt.Fprintf(w, "<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n<BODY>\n")
 	fmt.Fprintf(w, "<DIV id=\"header\">\n<H1>%v</H1>\n</DIV>\n", l.config.Title)
 	fmt.Fprintf(w, "<DIV id=\"settings\"><A HREF=%v><IMG class=\"settings\" src=\"%v/%v\" alt=\"%v\"></A></DIV>\n", _SETTINGS, _RESOURCES, _SETTINGS_IMG, _SETTINGS_ALT)
 	fmt.Fprintf(w, "<DIV id=\"main\">\n")
